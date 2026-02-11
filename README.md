@@ -22,3 +22,28 @@ Um container será um ambiente de virtualização
 ![alt text](assets\images\image.png)
 
 Contêiner: instância de uma imagem do docker
+
+## Docker
+
+Docker é uma forma de construir e rodar esses containers, salvar em templates, etc...
+
+Ele é uma plataforma de código aberto que usa contêiners para empacotar aplicações e suas dependências, garantindo que elas sejam executadas de forma consistente em qualquer ambiente. O Docker permite que os desenvolvedores criem, testem e implantem aplicativos de maneira rápida e eficiente, independentemente do sistema operacional ou infraestrutura subjacente.
+
+
+![alt text](assets/images/image1.png)
+
+* ### Client - interface de linha de comando para interagir com o docker host
+
+ Os comandos do Docker são usados para criar, gerenciar e interagir com contêineres e imagens. Eles permitem que os desenvolvedores construam, testem e implantem aplicativos de maneira rápida e eficiente, independentemente do sistema operacional ou infraestrutura subjacente.
+
+
+* ### Docker Host - onde os containers rodam
+
+O docker host é o ambiente onde os contêineres são executados. Ele pode ser um servidor físico, uma máquina virtual ou um serviço de nuvem. O Docker host é responsável por gerenciar os recursos do sistema e garantir que os contêineres sejam executados de forma eficiente.
+
+* ### Registry - repositório de imagens 
+
+O registry é um repositório de imagens do Docker, onde os desenvolvedores podem armazenar e compartilhar suas imagens. O Docker Hub é o registro público mais popular, mas também existem registros privados que as empresas podem usar para armazenar suas imagens de forma segura.
+
+
+
