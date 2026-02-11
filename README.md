@@ -89,3 +89,9 @@ Uma imagem é um pacote com todas as dependências e informações necessárias 
 
 
 
+## Assuntos extras para estudar
+
+### Orquestradores de contêineres
+- **Docker Swarm:** ferramenta de orquestração de contêineres do Docker, que permite gerenciar um cluster de hosts Docker e implantar aplicativos em contêineres de forma escalável e resiliente.
+
+- **Kubernetes:** plataforma de código aberto para automação de implantação, dimensionamento e gerenciamento de aplicativos em contêineres, que suporta uma ampla variedade de ferramentas de contêinerização, incluindo o Docker. O Kubernetes é amplamente utilizado para orquestrar e gerenciar aplicativos em contêineres em ambientes de produção.
