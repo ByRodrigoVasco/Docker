@@ -51,7 +51,12 @@ As imagens são armazenadas de forma local, porém elas também podem ser armaze
 
 As imagens são construídas em camadas, onde cada camada representa uma modificação ou adição feita à imagem base. Isso permite que as imagens sejam reutilizadas e compartilhadas de forma eficiente, economizando espaço de armazenamento e tempo de download.
 
+Em outras palavras, as imagens contêm uma sequência de passos que vão ditar o comportamento de um container.
+
+![ImageXPTO ](assets/images/imageXPTO.png)
+
 ![ImageImages](assets/images/imageImages.png)
+
 
 * Imagem = classe
 
@@ -81,7 +86,7 @@ As imagens são construídas em camadas, onde cada camada representa uma modific
 
 
 
-## Flags importantes
+### Flags importantes
 
 | Flag | Descrição |
 | --- | --- |
@@ -97,13 +102,26 @@ As imagens são construídas em camadas, onde cada camada representa uma modific
 
 ##### **Dica:** *Use docker container rm -f [id do container]* para forçar a remoção de um container que está em execução. Cuidado: isso interrompe o processo imediatamente!
 
-## Subindo a primeira aplicação
-
-
 
 ## Dockerfile
 
+### Exemplo de um Dockerfile
+```dockerfile
 
+FROM ubuntu:22.04 
+RUN apt-get update && \
+    apt-get install python3.11 python3.11-dev python3-pip -y
+WORKDIR /app
+COPY . .
+RUN pip3 install --no-cache-dir -r requirements.txt
+EXPOSE 8000
+ENV NAME="Rodrigo Vasco"
+ENV IDADE=25
+ENV EMAIL="rodrigovasco.dev@gmail.com"
+CMD ["python3.11", "app.py"]
+
+
+```
 
 ## Assuntos extras para estudar
 
@@ -111,3 +129,18 @@ As imagens são construídas em camadas, onde cada camada representa uma modific
 - **Docker Swarm:** ferramenta de orquestração de contêineres do Docker, que permite gerenciar um cluster de hosts Docker e implantar aplicativos em contêineres de forma escalável e resiliente.
 
 - **Kubernetes:** plataforma de código aberto para automação de implantação, dimensionamento e gerenciamento de aplicativos em contêineres, que suporta uma ampla variedade de ferramentas de contêinerização, incluindo o Docker. O Kubernetes é amplamente utilizado para orquestrar e gerenciar aplicativos em contêineres em ambientes de produção.
+
+
+## Links úteis
+- [Docker](https://www.docker.com/)
+- [Docker Hub](https://hub.docker.com/)
+- [Apostila Docker](Apostila/apostila-docker.pdf)
+- [Drive do curso de férias - Leonardo Farias ](https://drive.google.com/drive/folders/1DIxNvbIVoWfdM8F7yi9JtDlOFHs8QgtM)
+
+### Aulas/Cursos
+
+- [Docker do zero - Fernanda Kipper](https://www.youtube.com/watch?v=DdoncfOdru8&t=2s)
+
+- [Curso Docker Essencial: Primeiros Passos - TechEduca](https://www.youtube.com/watch?v=OERbOJZwGAU&list=PLViOsriojeLrdw5VByn96gphHFxqH3O_N)
+
+- [Docker compose - Fernanda Kipper](https://www.youtube.com/watch?v=D_ha0g9yS2E)
