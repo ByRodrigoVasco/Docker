@@ -45,5 +45,39 @@ O docker host é o ambiente onde os contêineres são executados. Ele pode ser u
 
 O registry é um repositório de imagens do Docker, onde os desenvolvedores podem armazenar e compartilhar suas imagens. O Docker Hub é o registro público mais popular, mas também existem registros privados que as empresas podem usar para armazenar suas imagens de forma segura.
 
+## Imagem
+Uma imagem é um pacote com todas as dependências e informações necessárias para criar um container. Você pode pensar em uma imagem como um modelo para criar containers. As imagens são construídas em camadas, onde cada camada representa uma modificação ou adição feita à imagem base.
+
+* Imagem = classe
+
+*  container = objeto
+
+## Comandos básicos do Docker
+
+* docker run - inicia um container a partir de uma imagem
+* docker build - constrói uma imagem a partir de um Dockerfile
+* docker pull - baixa uma imagem do repositório
+* docker push - envia uma imagem para o repositório
+* docker ps - lista os containers em execução
+* docker stop - para um container em execução
+* docker rm - remove um container
+
+
+## Flags importantes
+
+* -it - roda o container em modo interativo, permitindo acesso ao terminal do container
+* -d - roda o container em segundo plano, liberando o terminal (detached mode)
+* -p - mapeia as portas do container para as portas do host
+* --name - dá um nome ao container
+* --rm - remove o container automaticamente após a execução
+
+detached mode: modo em que o container roda em segundo plano, permitindo que o terminal seja liberado para outras tarefas. O container continua rodando mesmo após o terminal ser fechado. Para acessar o terminal do container em detached mode, é necessário usar o comando "docker exec -it <container_name> bash" ou "docker attach <container_name>".
+
+## Subindo a primeira aplicação
+
+
+
+## Dockerfile
+
 
 
