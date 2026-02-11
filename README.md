@@ -4,7 +4,6 @@ Para responder essa pergunta primeiro, você precisa entender o que são Contain
 
 ## Container
 
-
 Containers são tipo uma máquina virtual, tem o sistema operacional e tudo mais, só que, diferente das máquinas virtuais, eles não simulam o computador inteiro, mas sim criam um ambiente isolado que finge ser uma máquina virtual.
 
 Geralmente, esses containers também rodam a versão mais enxuta possível do software. Teoricamente, você pode instalar um sistema operacional como o Ubuntu com tudo que tem direito em um container, mas o que os profissionais costumam fazer é construir uma versão mais leve do sistema operacional, que só faz uma coisa.
@@ -43,10 +42,16 @@ O docker host é o ambiente onde os contêineres são executados. Ele pode ser u
 
 * ### Registry - repositório de imagens 
 
-O registry é um repositório de imagens do Docker, onde os desenvolvedores podem armazenar e compartilhar suas imagens. O Docker Hub é o registro público mais popular, mas também existem registros privados que as empresas podem usar para armazenar suas imagens de forma segura.
+O registry é um repositório de imagens do Docker, onde os desenvolvedores podem armazenar e compartilhar suas imagens. O [Docker Hub](https://hub.docker.com/) é o registro público mais popular, mas também existem registros privados que as empresas podem usar para armazenar suas imagens de forma segura.
 
 ## Imagem
-Uma imagem é um pacote com todas as dependências e informações necessárias para criar um container. Você pode pensar em uma imagem como um modelo para criar containers. As imagens são construídas em camadas, onde cada camada representa uma modificação ou adição feita à imagem base.
+A imagem Docker é basicamente uma série de instruções que o Docker segue para criar um container. Em seguida, com o container criado, o Docker irá executá-lo.
+
+As imagens são armazenadas de forma local, porém elas também podem ser armazenadas e distribuídas através de um docker registry, como o [Docker Hub](https://hub.docker.com/) ou um registro privado. 
+
+As imagens são construídas em camadas, onde cada camada representa uma modificação ou adição feita à imagem base. Isso permite que as imagens sejam reutilizadas e compartilhadas de forma eficiente, economizando espaço de armazenamento e tempo de download.
+
+![ImageImages](assets/images/imageImages.png)
 
 * Imagem = classe
 
@@ -70,12 +75,16 @@ Uma imagem é um pacote com todas as dependências e informações necessárias 
 
 
 ## Flags importantes
-* --name - dá um nome ao container
-* -it - roda o container em modo interativo, permitindo acesso ao terminal do container
-* -di - roda o container em segundo plano, liberando o terminal (detached mode)
-* -p - mapeia as portas do container para as portas do host
-* --name - dá um nome ao container
-* --rm - remove o container automaticamente após a execução
+
+| Flag | Descrição |
+| --- | --- |
+| --name | dá um nome ao container |
+| -it | roda o container em modo interativo, permitindo acesso ao terminal do container |
+| -di | roda o container em segundo plano, liberando o terminal (detached mode) |
+| -p | mapeia as portas do container para as portas do host |
+| --rm | remove o container automaticamente após a execução |
+| -e | define variáveis de ambiente para o container |
+| -v | monta um volume para persistência de dados |
 
 ##### **detached mode:** modo em que o container roda em segundo plano, permitindo que o terminal seja liberado para outras tarefas. O container continua rodando mesmo após o terminal ser fechado. Para acessar o terminal do container em detached mode, é necessário usar o comando "docker exec -it <container_name> bash" ou "docker attach <container_name>".
 
