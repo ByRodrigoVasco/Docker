@@ -59,18 +59,25 @@ As imagens são construídas em camadas, onde cada camada representa uma modific
 
 ## Comandos básicos do Docker
 
+### Container
+
 | Comando | Descrição |
 | --- | --- |
-| docker run | inicia um container a partir de uma imagem |
-| docker build | constrói uma imagem a partir de um Dockerfile |
-| docker pull | baixa uma imagem do repositório |
-| docker push | envia uma imagem para o repositório |
-| docker ls | lista os containers em execução |
-| docker ls -a | lista todos os containers, incluindo os parados |
-| docker stop | para um container em execução |
-| docker start | inicia um container parado |
-| docker rm | remove um container |
-| docker exec | executa um comando em um container em execução |
+| docker container run | inicia um container a partir de uma imagem |
+| docker container ls | lista os containers em execução |
+| docker container ls -a | lista todos os containers, incluindo os parados |
+| docker container stop | para um container em execução |
+| docker container start | inicia um container parado |
+| docker container rm | remove um container |
+| docker container exec | executa um comando em um container em execução |
+
+### Image
+| Comando | Descrição |
+| --- | --- |
+| docker image build | constrói uma imagem a partir de um Dockerfile |
+| docker image rm | remove uma imagem |
+| docker image pull | baixa uma imagem do repositório |
+| docker image push | envia uma imagem para o repositório |
 
 
 
