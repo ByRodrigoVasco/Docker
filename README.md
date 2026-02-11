@@ -11,5 +11,14 @@ Geralmente, esses containers também rodam a versão mais enxuta possível do so
 
 É uma unidade padrão de software que empacotam componentes de software em um sistema de arquivos completo, que contem TUDO necessário para a execução: códito, runtime, ferramentas de sistema - qualquer coisa que possa ser instalada em um servidor. isso garante que o software sempre irá executar da mesma forma, independente do seu ambiente.
 
+### Caracterizando um container
 
+Um container será um ambiente de virtualização
 
+* Com menos consumo de processamento
+* Com menor custo de manutenção e configuração
+* Com menor tempo de inicialização e finalização
+
+![alt text](assets\images\image.png)
+
+Contêiner: instância de uma imagem do docker
