@@ -19,7 +19,7 @@ Um container será um ambiente de virtualização
 * Com menor custo de manutenção e configuração
 * Com menor tempo de inicialização e finalização
 
-![alt text](assets\images\image.png)
+![ImageContainers](assets/images/imageContainer.png)
 
 Contêiner: instância de uma imagem do docker
 
@@ -30,7 +30,7 @@ Docker é uma forma de construir e rodar esses containers, salvar em templates, 
 Ele é uma plataforma de código aberto que usa contêiners para empacotar aplicações e suas dependências, garantindo que elas sejam executadas de forma consistente em qualquer ambiente. O Docker permite que os desenvolvedores criem, testem e implantem aplicativos de maneira rápida e eficiente, independentemente do sistema operacional ou infraestrutura subjacente.
 
 
-![alt text](assets/images/image1.png)
+![ImageDocker](assets/images/imageDocker.png)
 
 * ### Client - interface de linha de comando para interagir com o docker host
 
@@ -62,7 +62,10 @@ Uma imagem é um pacote com todas as dependências e informações necessárias 
 | docker push | envia uma imagem para o repositório |
 | docker ps | lista os containers em execução |
 | docker stop | para um container em execução |
+| docker start | inicia um container parado |
 | docker rm | remove um container |
+| docker exec | executa um comando em um container em execução |
+
 
 
 ## Flags importantes
