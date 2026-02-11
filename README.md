@@ -54,13 +54,15 @@ Uma imagem é um pacote com todas as dependências e informações necessárias 
 
 ## Comandos básicos do Docker
 
-* docker run - inicia um container a partir de uma imagem
-* docker build - constrói uma imagem a partir de um Dockerfile
-* docker pull - baixa uma imagem do repositório
-* docker push - envia uma imagem para o repositório
-* docker ps - lista os containers em execução
-* docker stop - para um container em execução
-* docker rm - remove um container
+| Comando | Descrição |
+| --- | --- |
+| docker run | inicia um container a partir de uma imagem |
+| docker build | constrói uma imagem a partir de um Dockerfile |
+| docker pull | baixa uma imagem do repositório |
+| docker push | envia uma imagem para o repositório |
+| docker ps | lista os containers em execução |
+| docker stop | para um container em execução |
+| docker rm | remove um container |
 
 
 ## Flags importantes
