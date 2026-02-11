@@ -60,7 +60,8 @@ Uma imagem é um pacote com todas as dependências e informações necessárias 
 | docker build | constrói uma imagem a partir de um Dockerfile |
 | docker pull | baixa uma imagem do repositório |
 | docker push | envia uma imagem para o repositório |
-| docker ps | lista os containers em execução |
+| docker ls | lista os containers em execução |
+| docker ls -a | lista todos os containers, incluindo os parados |
 | docker stop | para um container em execução |
 | docker start | inicia um container parado |
 | docker rm | remove um container |
@@ -69,14 +70,16 @@ Uma imagem é um pacote com todas as dependências e informações necessárias 
 
 
 ## Flags importantes
-
+* --name - dá um nome ao container
 * -it - roda o container em modo interativo, permitindo acesso ao terminal do container
-* -d - roda o container em segundo plano, liberando o terminal (detached mode)
+* -di - roda o container em segundo plano, liberando o terminal (detached mode)
 * -p - mapeia as portas do container para as portas do host
 * --name - dá um nome ao container
 * --rm - remove o container automaticamente após a execução
 
-detached mode: modo em que o container roda em segundo plano, permitindo que o terminal seja liberado para outras tarefas. O container continua rodando mesmo após o terminal ser fechado. Para acessar o terminal do container em detached mode, é necessário usar o comando "docker exec -it <container_name> bash" ou "docker attach <container_name>".
+##### **detached mode:** modo em que o container roda em segundo plano, permitindo que o terminal seja liberado para outras tarefas. O container continua rodando mesmo após o terminal ser fechado. Para acessar o terminal do container em detached mode, é necessário usar o comando "docker exec -it <container_name> bash" ou "docker attach <container_name>".
+
+##### **Dica:** *Use docker container rm -f [id do container]* para forçar a remoção de um container que está em execução. Cuidado: isso interrompe o processo imediatamente!
 
 ## Subindo a primeira aplicação
 
